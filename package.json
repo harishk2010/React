@@ -4,6 +4,8 @@
   "description": "React week 1 and 2",
   
   "scripts": {
+    "start": "parcel helloReact.html",
+    "build": "parcel build helloReact.html",
     "test": "jest"
   },
   "repository": {

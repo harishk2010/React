@@ -1,17 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", { id: "heading" }, "Hello world , React");
+// JSX (Transpiled before it reaches the JS) - PARCEL - BABEL
+
+//JSX=> Babel transpiles it to React.createElement => ReactElement -JS Object => HTMLElement(render)
 
 
-const parent = React.createElement("div", { id: "parent" },
-    [React.createElement("div", { id: "child" },
-        [React.createElement("h1", {}, "Hello im H1 tag"), React.createElement("h1", {}, "Hello im H1 tag")]
-    ),React.createElement("div", { id: "child2" },
-        [React.createElement("h2", {}, "Hello im H2 tag"), React.createElement("h2", {}, "Hello im H2 tag")]
-    )]
+const elem= <span> React spand tag </span>
+const JsxHeading = (
+   
+<h1  id="heading"> 
+    {elem}
+     hello im JSXx</h1>
 )
-console.log(parent)
-const root = ReactDOM.createRoot(document.getElementById("root"));
+console.log(JsxHeading)
+//functional component
+const HeadingComponent = () => (
+    
+    
+    <div id="container">
+        {/* <JsxHeading/>    */}
+        {JsxHeading}
+        <h1 className="heading">Namste React Functional component</h1>
+    </div>
+)
 
-root.render(parent)
+const root = ReactDOM.createRoot(document.getElementById("root"))
+
+root.render(<HeadingComponent />)

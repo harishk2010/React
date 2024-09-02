@@ -60,3 +60,22 @@
     padding: 10px;
     cursor: pointer;
 }
+.shimmer{
+    display: flex;
+
+}
+
+.shimmer-item{
+    display: flex;
+   
+    flex-wrap: wrap;
+    margin: 7px;
+    background-color: rgba(250, 235, 215, 0.459);
+    
+    
+    padding: 5px;
+    width: 200px;
+    height: 400px;
+    
+
+}
